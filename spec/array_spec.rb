@@ -23,4 +23,10 @@ describe Array do
       people.where(:name => "Person 2", :age => 2).size.should == 1 
     end
   end
+
+  describe(".order") do
+    it "should order the object by :param" do
+      people.order(:age)[2].age.should == 1
+    end
+  end
 end
