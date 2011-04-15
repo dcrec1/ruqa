@@ -22,6 +22,10 @@ describe Array do
     it "should filter objects by multiple :param => :attribute" do
       people.where(:name => "Person 2", :age => 2).size.should == 1 
     end
+    
+    it "should filter objects by param < numeric" do
+      people.where(:age < 2).size.should == 5
+    end
   end
 
   describe(".order") do
